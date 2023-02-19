@@ -1,0 +1,23 @@
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #180420;
+  --clr-accent: #ff8eb3;
+  --clr-bg: #bdaed4;
+  --clr-bg-light: rgb(231, 231, 231);
+  --border-radius: 4px;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-bg);
+}
