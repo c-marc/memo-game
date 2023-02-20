@@ -42,6 +42,7 @@ function App() {
 
   // handle a choice
   const handleChoice = (card: Card) => {
+    //console.log("hC:", choiceOne?.id, choiceTwo?.id);
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 
@@ -51,6 +52,7 @@ function App() {
       setDisabled(true);
 
       if (choiceOne.src === choiceTwo.src) {
+        console.log(choiceOne.id, choiceTwo.id);
         setCards((prevCards) => {
           return prevCards.map((card) => {
             return card.src === choiceOne.src
@@ -97,7 +99,7 @@ function App() {
               key={card.id}
               card={card}
               handleChoice={handleChoice}
-              flipped={card === choiceOne || card == choiceTwo || card.matched}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
               disabled={disabled}
             />
           ))}
